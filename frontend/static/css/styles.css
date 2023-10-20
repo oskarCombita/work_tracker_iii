@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+h1 {
+  color: #a00bad;
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: 500;
+}
+h2.h2-form {
+  padding: 15px 15px 5px;
+}
+
+h3, form label {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+button, form .btn-primary {
+  border-radius: 5px;
+  height: 40px;
+  width: 170px;
+  box-shadow: 0px 2px 5px 0px rgb(112, 112, 112);
+  margin: 20px 0px;
+}
+button.btn-primary, form .btn-primary {
+  background-color: #a00bad;
+  color: #f7f7f7;
+}
+button.btn-secondary, form .btn-secondary.btn-primary {
+  background-color: #f7f7f7;
+  color: #424242;
+}
+
+header {
+  background-color: #a00bad;
+  box-shadow: 0px 0px 2px black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 7vh;
+}
+header div {
+  background-color: #f7f7f7;
+  padding: 1vh;
+}
+header div p {
+  color: #a00bad;
+  font-weight: 900;
+  font-size: 20px;
+}
+header .userText {
+  color: #f7f7f7;
+}
+
+main {
+  background-color: #E8E8E8;
+}
+
+form {
+  background-color: #E8E8E8;
+  color: #424242;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+form .form-box-container {
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  width: 80%;
+  max-width: 280px;
+  padding: 20px 15px;
+}
+form .form-box-container p {
+  padding: 17px 0px 0px;
+  font-size: 14px;
+  font-style: italic;
+}
+form fieldset {
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  width: 80%;
+  max-width: 280px;
+  padding: 20px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 25px;
+}
+form fieldset p {
+  padding: 17px 0px 0px;
+  font-size: 14px;
+  font-style: italic;
+}
+form .btn-primary {
+  background-color: #a00bad;
+  color: #f7f7f7;
+}
+form label.labelRadio {
+  margin-left: 5px;
+}
+form input.input-date-time {
+  color: #424242;
+  margin-left: 15px;
+  padding: 7px;
+  border: 0.5px solid #a5a5a5;
+  border-radius: 5px;
+}
+
+.input-text {
+  color: #424242;
+  margin-left: 15px;
+  padding: 7px;
+  border: 0.5px solid #a5a5a5;
+  border-radius: 5px;
+  max-width: 130px;
+}
+
+.li-menu {
+  font-size: 17px;
+  padding: 5px 25px;
+}/*# sourceMappingURL=styles.css.map */

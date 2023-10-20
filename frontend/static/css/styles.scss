@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$color-primary: #a00bad;
+$color-secundary: #0f5546;
+$color-light: #f7f7f7;
+$color-dark: #424242;
+$color-medium-dark: #a5a5a5;
+$background-color-light: #E8E8E8;
+
+*{
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+h1{
+    color: $color-primary;
+}
+
+h2{
+    font-size: 19px;
+    font-weight: 500;
+
+    &.h2-form{
+        padding: 15px 15px 5px;
+    }
+}
+
+h3{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@mixin form-box-container ($background-color){
+    background-color: $background-color;
+    border-radius: 7px;
+    width: 80%; 
+    max-width: 280px;
+    padding: 20px 15px; 
+      
+
+    & p{
+        padding: 17px 0px 0px;
+        font-size: 14px;
+        font-style: italic;
+    }
+}
+
+@mixin button-style ($type) {
+    @if $type == "primary" {
+        background-color: $color-primary;
+        color: $color-light;
+    } @else if $type == "secondary" {
+        background-color: $color-light;
+        color: $color-dark;
+    }
+}
+
+button{
+    border-radius: 5px;
+    height: 40px; 
+    width: 170px;
+    box-shadow: 0px 2px 5px 0px rgb(112, 112, 112);
+    margin: 20px 0px;
+    &.btn-primary{
+        @include button-style("primary");
+    }
+    &.btn-secondary{
+        @include button-style("secondary");
+    }
+}
+
+header{
+    background-color: $color-primary;
+    box-shadow: 0px 0px 2px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 7vh;
+
+        div{
+            background-color: $color-light;            
+            padding: 1vh;
+
+            p{
+                color: $color-primary;
+                font-weight: 900;
+                font-size: 20px;
+            }
+        }
+
+        .userText{
+            color: $color-light;
+        }
+}
+
+main{
+    background-color: $background-color-light;
+}
+
+form{
+    background-color: $background-color-light;
+    color: $color-dark;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+
+        .form-box-container{
+            @include form-box-container($color-light);
+        }
+
+        fieldset{
+            @include form-box-container($color-light);
+            display: flex;
+            flex-flow: column wrap;
+            gap: 25px;
+        }
+
+        .btn-primary{
+            @extend button;
+            @include button-style("primary");
+        }        
+
+        label{
+            @extend h3;
+        
+            &.labelRadio{
+                margin-left: 5px;
+            }
+        }
+
+        input{
+            &.input-date-time{
+                color: $color-dark;
+                margin-left: 15px;
+                padding: 7px;
+                border: 0.5px solid $color-medium-dark;
+                border-radius: 5px;
+            }
+        }
+}
+
+.input-text{
+    color: $color-dark;
+    margin-left: 15px;
+    padding: 7px;
+    border: 0.5px solid $color-medium-dark;
+    border-radius: 5px;
+    max-width: 130px;
+}
+
+.li-menu{
+    font-size: 17px;
+    padding: 5px 25px ;
+}
